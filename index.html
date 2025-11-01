@@ -102,10 +102,10 @@
 
         .food-card {
             border: none;
-            border-radius: 20px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             transition: transform 0.2s ease;
         }
 
@@ -259,11 +259,10 @@
         function addFoodToCategory(food) {
             const cardHTML = `
         <div class="col-6">
-          <div class="card food-card">
+          <div style="height:170px" class="card food-card">
             <img src="${food.image}" alt="${food.name}">
             <div class="card-body">
               <h6 class="translatable">${food.name}</h6>
-              <p class="price">€${food.price}</p>
             </div>
           </div>
         </div>`;
