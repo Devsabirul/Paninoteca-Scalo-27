@@ -72,10 +72,6 @@
             }
         }
 
-        .nav-item {
-            margin-bottom: 0.5rem;
-        }
-
         .nav-tabs {
             border: none;
             margin-bottom: 0.5rem;
@@ -90,7 +86,6 @@
             color: #555;
             background-color: #f6f6f6;
             margin-right: 8px;
-            /* padding: 8px 16px; */
             font-size: 0.9rem;
         }
 
@@ -140,7 +135,6 @@
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h4 class="fw-bold translatable">Menu</h4>
 
-            <!-- 🌐 Language Selector -->
             <select id="languageSelect" class="form-select w-auto" style="max-width: 150px;">
                 <option value="en">English</option>
                 <option value="de">German</option>
@@ -155,50 +149,123 @@
             </select>
         </div>
 
-        <!-- Tabs (unchanged) -->
         <ul class="nav nav-tabs" id="foodTabs" role="tablist">
             <li class="nav-item"><a class="nav-link translatable active" id="all-tab" data-bs-toggle="tab" href="#all"
-                    role="tab" class="">All</a></li>
+                    role="tab">All</a></li>
             <li class="nav-item"><a class="nav-link translatable" id="panini-tab" data-bs-toggle="tab" href="#Panini"
-                    role="tab" class="">Panini</a></li>
+                    role="tab">Panini</a></li>
             <li class="nav-item"><a class="nav-link translatable" id="hotdog-tab" data-bs-toggle="tab" href="#HotDog"
-                    role="tab" class="">Hot Dog</a></li>
+                    role="tab">Hot Dog</a></li>
+            <li class="nav-item"><a class="nav-link translatable" id="others-tab" data-bs-toggle="tab" href="#Others"
+                    role="tab">Others</a></li>
             <li class="nav-item"><a class="nav-link translatable" id="bevande-tab" data-bs-toggle="tab" href="#Bevande"
-                    role="tab" class="">Bevande</a></li>
+                    role="tab">Bevande</a></li>
             <li class="nav-item"><a class="nav-link translatable" id="birre-tab" data-bs-toggle="tab" href="#Birre"
-                    role="tab" class="">Birre</a></li>
+                    role="tab">Birre</a></li>
         </ul>
 
-        <!-- Tab Contents -->
         <div class="tab-content" id="foodTabsContent">
             <div class="tab-pane fade show active" id="all" role="tabpanel">
                 <div class="row" id="allItems"></div>
             </div>
-
-
             <div class="tab-pane fade" id="Panini" role="tabpanel">
                 <div class="row" id="paniniItems"></div>
             </div>
-
             <div class="tab-pane fade" id="HotDog" role="tabpanel">
                 <div class="row" id="hotdogItems"></div>
             </div>
-
             <div class="tab-pane fade" id="Bevande" role="tabpanel">
                 <div class="row" id="bevandeItems"></div>
             </div>
-
             <div class="tab-pane fade" id="Birre" role="tabpanel">
                 <div class="row" id="birreItems"></div>
+            </div>
+
+            <!-- 🍖 Others Tab -->
+            <div class="tab-pane fade" id="Others" role="tabpanel">
+                <div class="container py-3">
+
+                    <div class="menu-section mb-4">
+                        <h5 class="fw-bold text-danger translatable">🍖 Other Sandwich Options</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item translatable">Sandwich with Raw Ham or Mortadella or Salami <span class="float-end fw-semibold text-success">€5.00</span></li>
+                            <li class="list-group-item text-muted small translatable">3 sides of your choice + cheese + sauces</li>
+                            <li class="list-group-item translatable">Sandwich with Porchetta Double Base Pan <span class="float-end fw-semibold text-success">€7.50</span></li>
+                            <li class="list-group-item translatable">Small Sandwich <span class="float-end fw-semibold text-success">€3.50</span></li>
+                            <li class="list-group-item translatable">Plate with Meat & Vegetable <span class="float-end fw-semibold text-success">€7.50</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section mb-4">
+                        <h5 class="fw-bold text-danger translatable">🍔 Combo</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item translatable">Sandwich + Coca-Cola + French Fries <span class="float-end fw-semibold text-success">€9.99</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section mb-4">
+                        <h5 class="fw-bold text-danger translatable">⚙️ Our Basics</h5>
+                        <p class="translatable">Hamburger, sausage, chicken breast, chicken cutlet, beef slice, chicken or turkey sausage, artisanal porchetta, salami, raw ham, mortadella, tuna, eggs, spinach or vegetable burger.</p>
+                    </div>
+
+                    <div class="menu-section mb-4">
+                        <h5 class="fw-bold text-danger translatable">🍟 Our Side Dishes</h5>
+                        <p class="translatable">Tindole, chicory, spinach, provola, Neapolitan bacon, eggplant, grilled zucchini, potatoes, French fries, sautéed broccoli, courgettes, grilled peppers, sautéed onions, fresh salad, tomatoes, cheese, scamorza, cheddar, grilled aubergine, fried potatoes.</p>
+                    </div>
+
+                    <div class="menu-section mb-4">
+                        <h5 class="fw-bold text-danger translatable">🧂 Sauces</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item translatable">Ketchup</li>
+                                    <li class="list-group-item translatable">Mayonnaise</li>
+                                    <li class="list-group-item translatable">Barbecue</li>
+                                    <li class="list-group-item translatable">Mustard</li>
+                                    <li class="list-group-item translatable">Pink Sauce</li>
+                                    <li class="list-group-item translatable">Burger Sauce</li>
+                                    <li class="list-group-item translatable">Cheddar Sauce</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item translatable">Yogurt</li>
+                                    <li class="list-group-item translatable">Caesar</li>
+                                    <li class="list-group-item translatable">Spicy Oil</li>
+                                    <li class="list-group-item translatable">Nduja</li>
+                                    <li class="list-group-item translatable">Tabasco</li>
+                                    <li class="list-group-item translatable">Lumberjack Sauce</li>
+                                    <li class="list-group-item translatable">Vinegar Glaze</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Food Modal -->
+    <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img id="modalImage" src="" class="w-100" style="height:200px;object-fit:cover;border-top-left-radius:8px;border-top-right-radius:8px;">
+                <div class="modal-body">
+                    <h5 id="modalName" class="fw-bold mb-2 translatable"></h5>
+                    <p id="modalDetails" class="text-muted translatable"></p>
+                    <p id="modalPrice" class="price translatable"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary w-100 translatable" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Firebase + Translation -->
     <script type="module">
-        // 🌐 Google Translate Function using jQuery (fixed)
         function translate() {
             const sourceLang = 'en';
             const targetLang = $('#languageSelect').val();
@@ -224,12 +291,10 @@
             });
         }
 
-        // Trigger translation on language change
         $('#languageSelect').on('change', function () {
             translate();
         });
 
-        // 🔥 Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
@@ -246,7 +311,6 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // 🧠 Fetch food data
         async function loadMenu() {
             const querySnapshot = await getDocs(collection(db, "foods"));
             querySnapshot.forEach((doc) => {
@@ -255,14 +319,22 @@
             });
         }
 
-        // 🍔 Add food to correct tab
         function addFoodToCategory(food) {
             const cardHTML = `
         <div class="col-6">
-          <div style="height:170px" class="card food-card">
+          <div class="card food-card">
             <img src="${food.image}" alt="${food.name}">
             <div class="card-body">
               <h6 class="translatable">${food.name}</h6>
+              <button class="btn btn-sm btn-orange w-100 mt-2" 
+                data-bs-toggle="modal" 
+                data-bs-target="#foodModal"
+                data-name="${food.name}"
+                data-details="${food.details || 'No description available.'}"
+                data-price="${food.price || '-'}"
+                data-image="${food.image}">
+                Details
+              </button>
             </div>
           </div>
         </div>`;
@@ -270,20 +342,30 @@
             document.getElementById("allItems").innerHTML += cardHTML;
 
             const cat = (food.category || "").toLowerCase();
-            if (cat.includes("hamburger")) document.getElementById("hamburgersItems").innerHTML += cardHTML;
-            else if (cat.includes("panini")) document.getElementById("paniniItems").innerHTML += cardHTML;
+            if (cat.includes("panini")) document.getElementById("paniniItems").innerHTML += cardHTML;
             else if (cat.includes("hot") || cat.includes("dog")) document.getElementById("hotdogItems").innerHTML += cardHTML;
             else if (cat.includes("bevande")) document.getElementById("bevandeItems").innerHTML += cardHTML;
             else if (cat.includes("birre")) document.getElementById("birreItems").innerHTML += cardHTML;
         }
 
-        // 🏠 Show home & load data
+        $(document).on('click', '[data-bs-target="#foodModal"]', function () {
+            const name = $(this).data('name');
+            const details = $(this).data('details');
+            const price = $(this).data('price');
+            const image = $(this).data('image');
+
+            $('#modalName').text(name);
+            $('#modalDetails').text(details);
+            $('#modalPrice').text('€' + price);
+            $('#modalImage').attr('src', image);
+            translate();
+        });
+
         window.goHome = function () {
-            document.getElementById('splash').style.display = 'none';
-            document.getElementById('home').style.display = 'block';
+            $('#splash').hide();
+            $('#home').show();
             loadMenu();
         };
     </script>
 </body>
-
 </html>
